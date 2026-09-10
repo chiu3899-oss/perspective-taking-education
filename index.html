@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mô Phỏng Góc Nhìn - Giáo Dục Đồng Cảm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌍 Mô Phỏng Góc Nhìn</h1>
+            <p class="subtitle">Học tập thông cảm và hành vi hỗ trợ xã hội</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <button class="nav-btn active" data-section="home">Trang Chủ</button>
+            <button class="nav-btn" data-section="scenarios">Kịch Bản</button>
+            <button class="nav-btn" data-section="my-progress">Tiến Độ Của Tôi</button>
+            <button class="nav-btn" data-section="resources">Tài Nguyên</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="welcome-card">
+                    <h2>Chào mừng đến với Mô Phỏng Góc Nhìn</h2>
+                    <p>Đây là một nền tảng giáo dục được thiết kế để giúp bạn phát triển kỹ năng đồng cảm thông qua các kịch bản tương tác.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>📖 Học Về Đồng Cảm</h3>
+                            <p>Hiểu rõ hơn về cảm xúc và trải nghiệm của người khác</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🎭 Nhập Vai Tương Tác</h3>
+                            <p>Tham gia các kịch bản thực tế để phát triển kỹ năng xã hội</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>📊 Theo Dõi Tiến Độ</h3>
+                            <p>Xem sự phát triển của kỹ năng đồng cảm của bạn theo thời gian</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>🤝 Hành Vi Hỗ Trợ</h3>
+                            <p>Học cách giúp đỡ và hỗ trợ người khác trong cuộc sống hàng ngày</p>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="navigateTo('scenarios')">Bắt Đầu Ngay</button>
+                </div>
+
+                <div class="research-info">
+                    <h3>💡 Dựa Trên Nghiên Cứu Khoa Học</h3>
+                    <p>Nền tảng này được xây dựng dựa trên các nghiên cứu về hiệu quả của phương pháp mô phỏng góc nhìn trong giáo dục đồng cảm và hành vi hỗ trợ xã hội của học sinh THPT.</p>
+                    <ul>
+                        <li>✓ Cải thiện khả năng nhận thức cảm xúc của người khác</li>
+                        <li>✓ Phát triển hành vi hỗ trợ xã hội</li>
+                        <li>✓ Giảm định kiến và khuôn mẫu hóa</li>
+                        <li>✓ Mở rộng tầm nhìn thế giới</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Scenarios Section -->
+            <section id="scenarios" class="section">
+                <h2>Các Kịch Bản Mô Phỏng</h2>
+                <div class="scenarios-grid">
+                    <!-- Scenarios will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="my-progress" class="section">
+                <h2>Tiến Độ Của Tôi</h2>
+                <div class="progress-container">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Kịch Bản Hoàn Thành</h3>
+                            <p class="stat-value" id="completed-scenarios">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Điểm Đồng Cảm</h3>
+                            <p class="stat-value" id="empathy-score">0%</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Hành Vi Hỗ Trợ</h3>
+                            <p class="stat-value" id="prosocial-score">0%</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Ngày Liên Tiếp</h3>
+                            <p class="stat-value" id="streak-days">0</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-section">
+                        <h3>Tiến Độ Kịch Bản</h3>
+                        <div id="scenario-progress" class="progress-list">
+                            <!-- Progress will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="achievements-section">
+                        <h3>🏆 Thành Tựu</h3>
+                        <div class="achievements-grid" id="achievements">
+                            <!-- Achievements will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources" class="section">
+                <h2>Tài Nguyên Học Tập</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📚 Bài Viết: Đồng Cảm Là Gì?</h3>
+                        <p>Tìm hiểu khái niệm đồng cảm và tại sao nó lại quan trọng trong các mối quan hệ xã hội.</p>
+                        <button class="btn btn-secondary" onclick="showResource('empathy-basics')">Đọc Thêm</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>📚 Bài Viết: Hành Vi Hỗ Trợ Xã Hội</h3>
+                        <p>Khám phá các cách để giúp đỡ và hỗ trợ người khác trong cuộc sống hàng ngày.</p>
+                        <button class="btn btn-secondary" onclick="showResource('prosocial-behavior')">Đọc Thêm</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>📚 Bài Viết: Vượt Qua Định Kiến</h3>
+                        <p>Học cách nhận biết và vượt qua những định kiến cá nhân để có cái nhìn công bằng hơn.</p>
+                        <button class="btn btn-secondary" onclick="showResource('overcoming-bias')">Đọc Thêm</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3>📚 Bài Viết: Phát Triển Kỹ Năng Lắng Nghe</h3>
+                        <p>Cải thiện kỹ năng lắng nghe tích cực để hiểu rõ hơn người khác.</p>
+                        <button class="btn btn-secondary" onclick="showResource('listening-skills')">Đọc Thêm</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for Resources -->
+        <div id="resource-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="resource-content">
+                    <!-- Resource content will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Scenario -->
+        <div id="scenario-modal" class="modal">
+            <div class="modal-content scenario-modal-content">
+                <span class="close" onclick="closeScenarioModal()">&times;</span>
+                <div id="scenario-content">
+                    <!-- Scenario content will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
